@@ -1,55 +1,48 @@
-// 1 - Select the section with an id of container without using querySelector.
+// 1) Select the section with an id of container without using querySelector.
+console.log(document.getElementById("container"));
 
-document.getElementById("container");
+// 2) Select the section with an id of container using querySelector.
+console.log(document.querySelector("#container"));
 
-// 2 - Select the section with an id of container using querySelector.
+// 3) Select all of the list items with a class of "second".
+console.log(document.getElementsByClassName("second"));
 
-document.querySelector("#container")
+// 4) Select a list item with a class of third, but only the list item inside of the ol tag.
+console.log(document.querySelector("ol .third"));
 
-// 3 - Select all of the list items with a class of "second".
+// 5) Give the section with an id of container the text "Hello!".
+//document.getElementById("container").innerText = "Hello World";
 
-document.getElementsByClassName("second")
+// 6) Add the class main to the div with a class of footer.
+const addMain = document.querySelector(".footer");
+addMain.classList.add("main");
+console.log(addMain);
 
-// 4 - Select a list item with a class of third, but only the list item inside of the ol tag.
+// 7) Remove the class main on the div with a class of footer.
+addMain.classList.remove("main");
+console.log(addMain);
 
-document.querySelector("ol .third");
+// 8) Create a new li element.
+var addList = document.createElement("li");
+console.log(addList);
 
-// 5 - Give the section with an id of container the text "Hello!".
+// 9) Give the li the text "four".
+console.log(addList.innerText = "four");
 
-var foundDiv = document.querySelector("#container");
-foundDiv.innerText = "Hello";
+// 10) Append the li to the ul element.
+const appendingHere = document.querySelector("ul");
+console.log(appendingHere.appendChild(addList));
 
-// 6 - Add the class main to the div with a class of footer.
-
-var footer = document.querySelector(".footer");
-footer.classList.add("main");
-
-// 7 - Remove the class main on the div with a class of footer.
-
-var footer = document.querySelector(".footer");
-footer.classList.remove("main");
-
-// 8 - Create a new li element.
-
-var newLi = document.createElement("li");
-
-// 9 - Give the li the text "four".
-
-newLi.innerText = "four"
-
-// 10 - Append the li to the ul element.
-
-var list = document.querySelector("ul");
-list.appendChild(newLi);
-
-// 11 - Loop over all of the lis inside the ol tag and give them a background color of "green".
-
-var liInsideOl = document.querySelectorAll("ol li");
-for(var i = 0; i < liInsideOl.length; i++){
-    liInsideOl[i].style.backgroundColor = "green";
+// 12) Loop over all of the lis inside the ol tag and give them a background color of "green".
+const loopList = document.querySelectorAll("ol li");
+for(let i = 0 ; i < loopList.length; i++) {
+    loopList[i].style.backgroundColor = "green";
 }
 
-// 12 - Remove the div with a class of footer.
+// 13) Remove the div with a class of footer.
+const removeDiv = document.querySelector(".footer");
+console.log(removeDiv.remove());
 
-var footer = document.querySelector(".footer");
-footer.remove();
+
+
+
